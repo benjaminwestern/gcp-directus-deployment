@@ -28,8 +28,8 @@ override.tf.json
 .terraform.lock.hcl
 
 # Added these lines so any changes won't be pushed back to the core repo
-backend.tf
-NEW_backend.tf
+terraform/backend.tf
+terraform/NEW_backend.tf
 
 # Include override files you do wish to add to version control using negated pattern
 # !example_override.tf
