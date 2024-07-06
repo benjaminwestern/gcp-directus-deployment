@@ -105,3 +105,15 @@ resource "google_storage_bucket_iam_member" "bucket_public" {
   member     = "allUsers"
   depends_on = [google_storage_bucket.bucket]
 }
+
+resource "google_storage_bucket_iam_member" "cr_public_bucket_permissions" {
+  bucket = google_storage_bucket.bucket.name
+  role   = "roles/storage.admin"
+  member = "serviceAccount:${google_service_account.cloud_run_service.email}"
+}
+
+resource "google_storage_bucket_iam_member" "cr_assets_bucket_permissions" {
+  bucket = google_storage_bucket.assets.name
+  role   = "roles/storage.admin"
+  member = "serviceAccount:${google_service_account.cloud_run_service.email}"
+}
