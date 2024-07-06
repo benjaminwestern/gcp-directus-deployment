@@ -1,7 +1,6 @@
 terraform {
-  backend "gcs" {
-    bucket = "tfstate-ben-gcp-directus-9932"
-    prefix = "terraform/state"
+  backend "local" {
+    path = "terraform.tfstate"
   }
   required_providers {
     google = {
