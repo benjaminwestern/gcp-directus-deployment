@@ -57,17 +57,17 @@ resource "google_cloud_run_v2_service" "cloud_run_service" {
       }
       dynamic "env" {
         for_each = {
-          "ENVIRONMENT" = "production",
-          "DB_DRIVER"   = "mysql",
-          "DB_HOST"     = "cloudsql/${google_sql_database_instance.mysql_instance.connection_name}", # Required format for Directus Database e.g /cloudsql/directus-project:us-central1:directus-db
-          "DB_PORT"     = "3306",
-          "DB_DATABASE" = var.database_name,
-          "DB_USER"     = google_sql_user.users.name,
-          STORAGE_LOCATIONS : "gcs"
-          STORAGE_GCS_DRIVER : "gcs"
-          STORAGE_GCS_BUCKET : google_storage_bucket.assets.name
-          ADMIN_EMAIL : var.directus_admin_email
-          DB_SSL__REJECT_UNAUTHORIZED : true
+          "ENVIRONMENT"                 = "production",
+          "DB_DRIVER"                   = "mysql",
+          "DB_HOST"                     = "cloudsql/${google_sql_database_instance.mysql_instance.connection_name}", # Required format for Directus Database e.g /cloudsql/directus-project:us-central1:directus-db
+          "DB_PORT"                     = "3306",
+          "DB_DATABASE"                 = var.database_name,
+          "DB_USER"                     = google_sql_user.users.name,
+          "ADMIN_EMAIL"                 = var.directus_admin_email
+          "STORAGE_LOCATIONS"           = "gcs"
+          "STORAGE_GCS_DRIVER"          = "gcs"
+          "STORAGE_GCS_BUCKET"          = google_storage_bucket.assets.name
+          "DB_SSL__REJECT_UNAUTHORIZED" = true
         }
         content {
           name  = env.key
