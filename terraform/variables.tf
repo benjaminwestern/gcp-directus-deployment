@@ -37,7 +37,6 @@ variable "cr_project_roles" {
     "roles/run.invoker",
     "roles/vpcaccess.user",
     "roles/secretmanager.secretAccessor",
-    "roles/storage.admin",
   ]
 }
 
