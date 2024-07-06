@@ -18,6 +18,7 @@ resource "google_cloud_run_v2_service" "cloud_run_service" {
   name         = var.service_name
   location     = var.deployment_location
   launch_stage = "GA"
+  ingress      = "INGRESS_TRAFFIC_INTERNAL_LOAD_BALANCER"
 
   template {
     scaling {
