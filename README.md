@@ -67,3 +67,10 @@ billing_account_id   = "<YOUR BILLING ACCOUNT ID>" # THESE MUST BE FILLED OUT
 3. Ensure you are still authenticated to Google Cloud using `gcloud projects list` if data is returned, your good to continue.
 4. Now, following the instructions, mount your GCP MySQL instance locally via the Proxy.
 5. You can now login to the MySQL Database Locally to migrate data. If you need the credentials, ensure to grab them out of the secrets stored in 'Secrets Manager'
+
+## Handy Hints
+If you need to rename the container, redeploy the container or simply want to remove it, you will need to manually decouple the serverless NEG from the backends. You can do this by going to: [Backends](https://console.cloud.google.com/net-services/loadbalancing/list/backends) then for each of your listed backends that use the NEG, click edit, delete the backend and click save.
+
+You can now delete the cloud run container / update it, as well as delete / update the Serverless NEG.
+
+I don't know why I can't get terraform to handle this transition for me, but I couldn't
