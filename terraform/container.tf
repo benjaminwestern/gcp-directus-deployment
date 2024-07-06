@@ -154,6 +154,7 @@ resource "google_cloud_run_service_iam_policy" "noauth" {
   policy_data = data.google_iam_policy.auth.policy_data
   depends_on = [
     google_project_iam_member.project_cr_roles,
+    google_cloud_run_v2_service.cloud_run_service
   ]
   lifecycle {
     ignore_changes = [
