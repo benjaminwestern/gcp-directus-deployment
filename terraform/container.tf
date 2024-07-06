@@ -87,7 +87,7 @@ resource "google_cloud_run_v2_service" "cloud_run_service" {
         name = "KEY"
         value_source {
           secret_key_ref {
-            secret  = google_secret_manager_secret.password_secret.secret_id
+            secret  = google_secret_manager_secret.extra_password_secrets["directus-key"].secret_id
             version = "latest"
           }
         }
@@ -96,7 +96,7 @@ resource "google_cloud_run_v2_service" "cloud_run_service" {
         name = "SECRET"
         value_source {
           secret_key_ref {
-            secret  = google_secret_manager_secret.password_secret.secret_id
+            secret  = google_secret_manager_secret.extra_password_secrets["directus-secret"].secret_id
             version = "latest"
           }
         }
@@ -105,7 +105,7 @@ resource "google_cloud_run_v2_service" "cloud_run_service" {
         name = "ADMIN_PASSWORD"
         value_source {
           secret_key_ref {
-            secret  = google_secret_manager_secret.password_secret.secret_id
+            secret  = google_secret_manager_secret.extra_password_secrets["directus-admin"].secret_id
             version = "latest"
           }
         }
