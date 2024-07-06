@@ -66,7 +66,7 @@ resource "google_secret_manager_secret_version" "password_secret_version" {
 
 resource "google_sql_user" "users" {
   provider   = google-beta.australia-southeast1
-  name       = "root"
+  name       = "directus"
   host       = "%"
   instance   = google_sql_database_instance.mysql_instance.name
   password   = random_password.root_password.result
