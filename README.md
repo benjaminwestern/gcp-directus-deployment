@@ -86,3 +86,6 @@ If you need to rename the container, redeploy the container or simply want to re
 You can now delete the cloud run container / update it, as well as delete / update the Serverless NEG.
 
 I don't know why I can't get terraform to handle this transition for me, but I couldn't
+
+# Important Note 
+This repository demonstrates an end-to-end deployment pattern for hosting a Docker image using Cloud Run and Identity-Aware Proxy (IAP). However, this is just one approach, and you should always conduct your own research and ensure that the tools and technologies used here meet your specific needs before implementing them in your own projects.
