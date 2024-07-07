@@ -13,7 +13,7 @@ Feel free to customize it to meet your specific needs.
 <p align="center"> <img src="images/architecture.png" width="700"> </p>
 
 ## Reference
-1. Content is pulled from the directus page here: [Manual deploy directus to GCP](https://docs.directus.io/blog/deploying-directus-to-google-cloud-platform-with-docker.html)
+Content is pulled from the directus page here: [Manual deploy directus to GCP](https://docs.directus.io/blog/deploying-directus-to-google-cloud-platform-with-docker.html)
 
 ## Prerequisite Software
 1. Install Google Cloud SDK [Installation Instructions](https://cloud.google.com/sdk/docs/install#installation_instructions)
@@ -86,6 +86,8 @@ If you need to rename the container, redeploy the container or simply want to re
 You can now delete the cloud run container / update it, as well as delete / update the Serverless NEG.
 
 I don't know why I can't get terraform to handle this transition for me, but I couldn't
+
+Also, in this Terraform I have deployed both an IAP Accessible Load Balancer and a Publically accessible Load Balancer. This is for instructional purposes so that the power of IAP can be shown in combination with a public site.
 
 # Important Note 
 This repository demonstrates an end-to-end deployment pattern for hosting a Docker image using Cloud Run and Identity-Aware Proxy (IAP). However, this is just one approach, and you should always conduct your own research and ensure that the tools and technologies used here meet your specific needs before implementing them in your own projects.
