@@ -1,4 +1,16 @@
 # Introduction
+This pattern is designed to be easy to deploy and maintain, and it is a great starting point for anyone who wants to use Directus in a Google Cloud environment.
+
+The repository includes:
+- A Terraform library that defines all the resources required for the pattern 
+- Instructions for how to use the pattern, as well as additional extra features to expand the pattern further.
+
+This pattern is designed to be a starting point for building your own Directus Cloud Run applications.
+
+Feel free to customize it to meet your specific needs.
+
+## Architecture
+<p align="center"> <img src="../images/architecture.png" width="700"> </p>
 
 ## Reference
 1. Content is pulled from the directus page here: [Manual deploy directus to GCP](https://docs.directus.io/blog/deploying-directus-to-google-cloud-platform-with-docker.html)
