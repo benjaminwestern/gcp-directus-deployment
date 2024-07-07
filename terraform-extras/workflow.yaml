@@ -1,0 +1,17 @@
+# Default Values
+substitutions:
+  _REGISTRY: <ARTIFACT REGISTRY>
+  _DOCKERFILE_LOCATION: <PATH IN REPO>
+  _SERVICE_NAME: <IMAGE NAME> 
+  _REGION: australia-southeast1
+
+steps:
+### Build
+  - id: "build image"
+    name: "gcr.io/cloud-builders/docker:24.0.6"
+    args: ["build", "-t", "australia-southeast1-docker.pkg.dev/${PROJECT_ID}/${_REGISTRY}/${_SERVICE_NAME}", "${_DOCKERFILE_LOCATION}/."]
+
+### Push
+  - id: "push image"
+    name: "gcr.io/cloud-builders/docker:24.0.6"
+    args: ["push", "australia-southeast1-docker.pkg.dev/${PROJECT_ID}/${_REGISTRY}/${_SERVICE_NAME}"]
