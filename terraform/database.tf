@@ -3,7 +3,6 @@ resource "google_sql_database_instance" "mysql_instance" {
   name             = "${var.service_name}-mysql-instance"
   database_version = "MYSQL_8_0"
   region           = var.deployment_location
-  # needs to be a private instance
   settings {
     tier = "db-f1-micro"
     ip_configuration {
