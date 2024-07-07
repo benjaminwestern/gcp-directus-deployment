@@ -89,5 +89,12 @@ I don't know why I can't get terraform to handle this transition for me, but I c
 
 Also, in this Terraform I have deployed both an IAP Accessible Load Balancer and a Publically accessible Load Balancer. This is for instructional purposes so that the power of IAP can be shown in combination with a public site.
 
+## Cleaning Up
+1. You can simply destroy your created project to clean-up this repositories deployed resources: `gcloud projects delete example-foo-bar-1`
+2. You can also delete your infrastructure using terraform: `terraform destroy`
+
+## Pricing
+Without going SUPER deep on the pricing calculator this respository deploys resources that cost ~$2 AUD / Day, however as it deploys **PUBLIC** facings infrastructure your costs **WILL** scale with usage of the containers and the associated storage bucket. `This is your warning!`
+
 # Important Note 
 This repository demonstrates an end-to-end deployment pattern for hosting a Docker image using Cloud Run and Identity-Aware Proxy (IAP). However, this is just one approach, and you should always conduct your own research and ensure that the tools and technologies used here meet your specific needs before implementing them in your own projects.
