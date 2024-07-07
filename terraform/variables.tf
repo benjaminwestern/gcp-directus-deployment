@@ -24,6 +24,7 @@ variable "apis_to_enable" {
     "run.googleapis.com",
     "storage-api.googleapis.com",
     "storage-component.googleapis.com",
+    "storagetransfer.googleapis.com",
     "vpcaccess.googleapis.com",
     "secretmanager.googleapis.com",
   ]
