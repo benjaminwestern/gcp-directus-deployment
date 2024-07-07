@@ -10,7 +10,7 @@ This pattern is designed to be a starting point for building your own Directus C
 Feel free to customize it to meet your specific needs.
 
 ## Architecture
-<p align="center"> <img src="../images/architecture.png" width="700"> </p>
+<p align="center"> <img src="images/architecture.png" width="700"> </p>
 
 ## Reference
 1. Content is pulled from the directus page here: [Manual deploy directus to GCP](https://docs.directus.io/blog/deploying-directus-to-google-cloud-platform-with-docker.html)
