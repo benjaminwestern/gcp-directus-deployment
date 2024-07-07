@@ -2,7 +2,7 @@
 This terraform-extras directory shows how to add Gen2 Cloud Build repositories and Docker Image building to Artifact Repositories to pass your own Images to the Cloud Run container that is created in the core `terraform/` folder.
 
 ## Architecture Diagram
-<p align="center"> <img src="images/gen2-cloud-build-pipeline.png" width="700"> </p>
+<p align="center"> <img src="../images/gen2-cloud-build-pipeline.png" width="700"> </p>
 
 ## Additional Files
 1. triggers.tf
